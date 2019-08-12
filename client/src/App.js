@@ -9,14 +9,11 @@ import CheckoutPage from './pages/checkout/checkout.component';
 import Header from './components/header/header.component';
 import Auth from './pages/auth/auth.component';
 
-import {
-  auth,
-  createUserProfileDocument,
-} from './firebase/firebase.utils';
+import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import { setCurrentUser } from './redux/user/user.action';
 import { selectCurrentUser } from './redux/user/user.selector';
 
-import './App.css';
+import { GlobalStyles } from './global.styles';
 
 class App extends React.Component {
   unsubscribeFromAuth = null;
@@ -44,6 +41,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <GlobalStyles />
         <Header />
         <Switch>
           <Route exact path='/' component={HomePage} />
