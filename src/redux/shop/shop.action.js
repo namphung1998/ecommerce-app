@@ -9,15 +9,15 @@ import {
   FETCH_COLLECTION_FAILURE
 } from './shop.types';
 
-const fetchCollectionsSuccess = collectionsMap => {
+export const fetchCollectionsSuccess = collectionsMap => {
   return { type: FETCH_COLLECTION_SUCCESS, payload: collectionsMap };
 };
 
-const fetchCollectionsStart = () => {
+export const fetchCollectionsStart = () => {
   return { type: FETCH_COLLECTION_START };
 };
 
-const fetchCollectionsFailure = errorMessage => {
+export const fetchCollectionsFailure = errorMessage => {
   return { type: FETCH_COLLECTION_FAILURE, payload: errorMessage };
 };
 
